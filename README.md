@@ -1,0 +1,2 @@
+# MAGAZ
+web-shop
