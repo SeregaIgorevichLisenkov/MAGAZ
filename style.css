@@ -70,7 +70,7 @@ body {
    margin: 0 auto;
    border: 1px solid #7a7a7a;
    border-radius: 10px;
-   background: white;
+   background: #ffffff;
    font-family: "Open Sans";
    transition: .3s ease;
    overflow: hidden;
@@ -112,20 +112,23 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
+	color:  #ffffff;
 }
 
 .cart-item {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	color:  #ffffff;
 }
 
 .cart-item-price {
 	font-weight: bold;
+	color:  #ffffff;
 }
 
 .cart-item-delete {
-	background: red;
-	color:  white;
+	background: #ff0000;
+	color:  #ffffff;
 	border:  none;
 	border-radius: 5px;
 	width: 30px;
