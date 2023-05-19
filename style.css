@@ -1,18 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 * {
 	box-sizing: border-box;
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
 	padding: 5px;
-	background: linear-gradient(
+	background-image:
+	url("img/background_pattern.png"), 
+	linear-gradient(
 		-45deg,
-		#664422 0%,
+		#775533 0%,
 		#442266 50%,
-		#224466 100%
-	);
+		#335577 100%
+	);         
+	background-attachment: fixed;
 }
 
 .tabs {
@@ -24,7 +27,7 @@ body {
 .separator {
 	margin: 0 5px;
 	font-size: 30px;
-	color: #777799;
+	color: #ffffff;
 }
 
 .tab {
@@ -33,7 +36,7 @@ body {
 	font-size: 30px;
 	border: none;
 	background: transparent;
-	color: #777799;
+	color: #ffaa00;
 	cursor: pointer;
 }
 
@@ -43,21 +46,21 @@ body {
 	justify-content: center;
 	align-items: center;
 	margin-left: 5px;
-	color:  #ffffff;
-	font-size: 13px;
-	background: #ff3333;
-	height: 20px;
-	width:  20px;
+	color:  #442266;
+	font-size: 15px;
+	background: #ffaa00;
+	height: 25px;
+	width:  25px;
 	border-radius: 50%;
 }
 
 .tab.active {
 	pointer-events: none;
-	color: #00ffff;
+	color: #ffffff;
 }
 
 .tab:hover {
-	color: #0099ff;
+	color: #ffff00;
 }
 
 .product-items {
@@ -73,9 +76,9 @@ repeat(auto-fill, 200px) 5%;
     width: 200px;
     text-align: center;
     margin: 0 auto;
-    border: 1px solid #999999;
+    border: 1px solid #442266;
     border-radius: 5px;
-    background: #ffffff;
+    background: #664488;
     transition: .3s ease;
     overflow: hidden;
 }
@@ -84,26 +87,30 @@ repeat(auto-fill, 200px) 5%;
     width: 100%; 
 	overflow: hidden;
 	object-fit: cover;
+	background: #ffffff;
+	border-radius: 5px;
 }
 .product-list {
-    background: #cccccc;
-    padding: 15px 0;
+    background: #775599;
+    margin: 10px;
+	padding: 10px;
+	border-radius: 5px;
 }
 .product-list h3 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
-    color: #0099ff;
+    color: #ffffff;
     margin: 0 0 10px 0;
 }
 .price {
-    color: #ff3333;
+    color: #ffaa00;
     margin-top: 0px;
     margin-bottom: 12px;
 }
 .button {
     padding: 6px 12px;
-    background: #777799;
-    color: #ffffff;
+    background: #ffaa00;
+    color: #442266;
     text-transform: uppercase;
     font-size: 12px;
     transition: .3s ease;
@@ -111,7 +118,7 @@ repeat(auto-fill, 200px) 5%;
     cursor: pointer;
 }
 .button:hover {
-    background: #ff3333;
+    background: #ffff00;
 }
 
 .cart-items {
@@ -119,6 +126,7 @@ repeat(auto-fill, 200px) 5%;
 	flex-direction: column;
 	gap: 8px;
 	color:  #ffffff;
+	border-radius: 5px;
 }
 
 .cart-item {
@@ -141,26 +149,55 @@ repeat(auto-fill, 200px) 5%;
 }
 
 .shapka {
-	background: #777799;
-	border:  none;
-	border-radius: 5px;
+	border: 1px solid #442266;
+    border-radius: 5px;
+    background: #664488;
 	color: #ffffff;
 	text-align: center;
 	padding: 5px;
 }
 
 .podval {
-	background: #777799;
-	border:  none;
-	border-radius: 5px;
+	border: 1px solid #442266;
+    border-radius: 5px;
+    background: #664488;
 	color: #ffffff;
 	text-align: center;
 	padding: 5px;
 }
-
-
-
-
+/* Стили Тёмной темы */
+body.dark-theme {
+		font-family: 'Montserrat', sans-serif;
+		height: 100vh;
+		padding: 5px;
+		background-image:
+		url("img/background_pattern.png"), 
+		linear-gradient(
+			-45deg,
+			#ff9977 0%,
+			#775599 50%,
+			#7799ff 100%
+		);         
+		background-attachment: fixed;
+	}
+	
+	body.dark-theme.shapka {
+		border: 1px solid #442266;
+		border-radius: 5px;
+		background: #9977ff;
+		color: #442266;
+		text-align: center;
+		padding: 5px;
+	}
+	
+	body.dark-theme.podval {
+		border: 1px solid #442266;
+		border-radius: 5px;
+		background: #9977ff;
+		color: #442266;
+		text-align: center;
+		padding: 5px;
+	}
 
 
 

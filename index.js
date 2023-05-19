@@ -184,7 +184,7 @@ function renderGoods() {
 
 			const button = document.createElement('button');
 			button.className = 'button';
-			button.textContent = 'В корзину';
+			button.textContent = 'В КОРЗИНОЧКУ';
 			button.addEventListener('click', clickHander);
 
 			productBlock.querySelector('.product-list').append(button);
