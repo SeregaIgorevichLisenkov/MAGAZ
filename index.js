@@ -240,6 +240,14 @@ function updateCartItem(id, count) {
 		cartItem.remove();
 	}
 }
+// ТЁМНАЯ ТЕМА
+// выбираем кнопку
+const btn = document.querySelector(".btn-toggle");
+// отслеживаем щелчок по кнопке
+btn.addEventListener("click", function () {
+  // затем переключаем (добавляем/удаляем) класс .dark-theme для body
+	document.body.classList.toggle("dark-theme");
+});
 
 
 

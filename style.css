@@ -78,7 +78,7 @@ repeat(auto-fill, 200px) 5%;
     margin: 0 auto;
     border: 1px solid #442266;
     border-radius: 5px;
-    background: #664488;
+    background: #664488ee;
     transition: .3s ease;
     overflow: hidden;
 }
@@ -151,7 +151,7 @@ repeat(auto-fill, 200px) 5%;
 .shapka {
 	border: 1px solid #442266;
     border-radius: 5px;
-    background: #664488;
+    background: #664488ee;
 	color: #ffffff;
 	text-align: center;
 	padding: 5px;
@@ -160,12 +160,13 @@ repeat(auto-fill, 200px) 5%;
 .podval {
 	border: 1px solid #442266;
     border-radius: 5px;
-    background: #664488;
+    background: #664488ee;
 	color: #ffffff;
 	text-align: center;
 	padding: 5px;
 }
-/* Стили Тёмной темы */
+
+/* ТЁМНАЯ ТЕМА */
 body.dark-theme {
 		font-family: 'Montserrat', sans-serif;
 		height: 100vh;
@@ -174,31 +175,70 @@ body.dark-theme {
 		url("img/background_pattern.png"), 
 		linear-gradient(
 			-45deg,
-			#ff9977 0%,
-			#775599 50%,
-			#7799ff 100%
+			#ffcc99 0%,
+			#cc99ff 50%,
+			#99ccff 100%
 		);         
 		background-attachment: fixed;
 	}
 	
-	body.dark-theme.shapka {
-		border: 1px solid #442266;
+	body.dark-theme .shapka {
+		border: 1px solid #cc99ff;
 		border-radius: 5px;
-		background: #9977ff;
+		background: #eeddffdd;
 		color: #442266;
 		text-align: center;
 		padding: 5px;
 	}
 	
-	body.dark-theme.podval {
-		border: 1px solid #442266;
+	body.dark-theme .podval {
+		border: 1px solid #cc99ff;
 		border-radius: 5px;
-		background: #9977ff;
+		background: #eeddffdd;
 		color: #442266;
 		text-align: center;
 		padding: 5px;
 	}
-
+	body.dark-theme .product-item {
+		width: 200px;
+		text-align: center;
+		margin: 0 auto;
+		border: 1px solid #cc99ff;
+		border-radius: 5px;
+		background: #eeddffdd;
+		transition: .3s ease;
+		overflow: hidden;
+	}
+	body.dark-theme .product-list {
+		background: #ffffff;
+		margin: 10px;
+		padding: 10px;
+		border-radius: 5px;
+	}
+	body.dark-theme .product-list h3 {
+		font-size: 20px;
+		font-weight: 400;
+		color: #442266;
+		margin: 0 0 10px 0;
+	}
+	body.dark-theme .price {
+		color: #ff7700;
+		margin-top: 0px;
+		margin-bottom: 12px;
+	}
+	body.dark-theme .button {
+		padding: 6px 12px;
+		background: #ffaa00;
+		color: #442266;
+		text-transform: uppercase;
+		font-size: 12px;
+		transition: .3s ease;
+		border: none;
+		cursor: pointer;
+	}
+	body.dark-theme .button:hover {
+		background: #ff7700;
+	}
 
 
 
