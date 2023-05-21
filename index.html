@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Магазинчик</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+</head>
+<body>
+<div class="wrapper">
+	<!--шапка сайта-->
+	<header>
+	<div class="shapka">
+		<h1>КУПИ МЕМАС</h1>
+		<button class="btn-toggle">день/ночь</button>
+	</div>
+	</header>
+	<!--табы-->
+	<main>
+	<div class="tabs">
+		<span class="separator">|</span>
+		<button class="tab" data-tab-id="goods">Товарчики</button>
+		<span class="separator">|</span>
+		<button class="tab cart-tab" data-goods-count="0" data-tab-id="cart">Корзиночка</button>
+		<span class="separator">|</span>
+	</div>
+	</main>
+	<!--подвал сайта-->
+	<footer>
+	<div class="podval">
+		<h4>ну купи, пожалуйста</h4>
+	</div>
+	</footer>
+</div>
+<!--скрипты-->
+	<script src="index.js"></script>
+	<script src="goods.js"></script>
+</body>
+</html>

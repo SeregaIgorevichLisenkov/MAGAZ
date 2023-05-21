@@ -2,7 +2,6 @@
 * {
 	box-sizing: border-box;
 }
-
 body {
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
@@ -17,29 +16,27 @@ body {
 	);         
 	background-attachment: fixed;
 }
-
 .tabs {
+	width: 100vh;
 	display: flex;
 	align-items: center;
+	align-content: center;
 	margin-bottom: 10px;
 }
-
 .separator {
 	margin: 0 5px;
-	font-size: 30px;
+	font-size: 20px;
 	color: #ffffff;
 }
-
 .tab {
 	display: flex;
 	align-items: center;
-	font-size: 30px;
+	font-size: 20px;
 	border: none;
 	background: transparent;
 	color: #ffaa00;
 	cursor: pointer;
 }
-
 .cart-tab::after {
 	content: attr(data-goods-count);
 	display: flex;
@@ -53,16 +50,13 @@ body {
 	width:  25px;
 	border-radius: 50%;
 }
-
 .tab.active {
 	pointer-events: none;
 	color: #ffffff;
 }
-
 .tab:hover {
 	color: #ffff00;
 }
-
 .product-items {
 	display: grid;
 	grid-template-columns:
@@ -71,7 +65,6 @@ repeat(auto-fill, 200px) 5%;
 	grid-gap: 5px;
 	gap: 5px;
 }
-
 .product-item {
     width: 200px;
     text-align: center;
@@ -120,7 +113,6 @@ repeat(auto-fill, 200px) 5%;
 .button:hover {
     background: #ffff00;
 }
-
 .cart-items {
 	display: flex;
 	flex-direction: column;
@@ -128,18 +120,15 @@ repeat(auto-fill, 200px) 5%;
 	color:  #ffffff;
 	border-radius: 5px;
 }
-
 .cart-item {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	color:  #ffffff;
 }
-
 .cart-item-price {
 	font-weight: bold;
 	color:  #ffffff;
 }
-
 .cart-item-delete {
 	background: #ff3333;
 	color:  #ffffff;
@@ -147,7 +136,6 @@ repeat(auto-fill, 200px) 5%;
 	border-radius: 5px;
 	width: 30px;
 }
-
 .shapka {
 	border: 1px solid #442266;
     border-radius: 5px;
@@ -155,8 +143,8 @@ repeat(auto-fill, 200px) 5%;
 	color: #ffffff;
 	text-align: center;
 	padding: 5px;
+	flex: 1 1 auto;
 }
-
 .podval {
 	border: 1px solid #442266;
     border-radius: 5px;
@@ -164,6 +152,18 @@ repeat(auto-fill, 200px) 5%;
 	color: #ffffff;
 	text-align: center;
 	padding: 5px;
+	flex: 1 1 auto;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+main {
+	flex: 1 0 auto;
+}
+footer {
+	flex: 0 0 auto;
 }
 
 /* ТЁМНАЯ ТЕМА */
@@ -181,18 +181,16 @@ body.dark-theme {
 		);         
 		background-attachment: fixed;
 	}
-	
 	body.dark-theme .shapka {
-		border: 1px solid #cc99ff;
+		border: 1px solid #ffffff;
 		border-radius: 5px;
 		background: #eeddffdd;
 		color: #442266;
 		text-align: center;
 		padding: 5px;
 	}
-	
 	body.dark-theme .podval {
-		border: 1px solid #cc99ff;
+		border: 1px solid #ffffff;
 		border-radius: 5px;
 		background: #eeddffdd;
 		color: #442266;
@@ -203,7 +201,7 @@ body.dark-theme {
 		width: 200px;
 		text-align: center;
 		margin: 0 auto;
-		border: 1px solid #cc99ff;
+		border: 1px solid #ffffff;
 		border-radius: 5px;
 		background: #eeddffdd;
 		transition: .3s ease;

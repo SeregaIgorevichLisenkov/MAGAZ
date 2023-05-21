@@ -117,7 +117,7 @@ function addClickListeners(elements, callback) {
 		element.addEventListener('click', callback);
 	}
 }
-
+/*СОЗДАНИЕ ТОВАРА ИЗ МАССИВА goods*/
 function createProduct(product) {
 	return {
 		id: product.id,
@@ -140,7 +140,7 @@ function removeActiveTabContent() {
 
 	activeContent.remove();
 }
-
+/*ПЕРЕКЛЮЧАМБА*/
 function renderTabContentById(tabId) {
 	const tabsContainer = document.querySelector('.tabs');
 	let html = null;
@@ -156,7 +156,7 @@ function renderTabContentById(tabId) {
 		tabsContainer.after(html);
 	}
 }
-
+/*ФУНКЦИЯ ОТОБРАЖЕНИЯ ТОВАРОВ*/
 function renderGoods() {
 	const div = document.createElement('div');
 	div.dataset.activeTabContent = 'true';
@@ -196,7 +196,7 @@ function renderGoods() {
 
 	return div;
 }
-
+/*ФУНКЦИЯ ОТОБРАЖЕНИЯ КОРЗИНЫ*/
 function renderCart() {
 	const container = document.createElement('div');
 	container.dataset.activeTabContent = 'true';
@@ -212,7 +212,7 @@ function renderCart() {
 	<div class="cart-item-title">${product.name}</div>
   	<div class="cart-item-count">${product.count} шт.</div>
   	<div class="cart-item-price">₽ ${product.price}</div>
-		`;
+			`;
 
 		const clickHander = removeInCartHandler(product.id);
 
@@ -225,7 +225,6 @@ function renderCart() {
 
 		container.append(cartItem);
 	}
-
 	return container;
 }
 
@@ -240,6 +239,7 @@ function updateCartItem(id, count) {
 		cartItem.remove();
 	}
 }
+
 // ТЁМНАЯ ТЕМА
 // выбираем кнопку
 const btn = document.querySelector(".btn-toggle");
@@ -248,10 +248,91 @@ btn.addEventListener("click", function () {
   // затем переключаем (добавляем/удаляем) класс .dark-theme для body
 	document.body.classList.toggle("dark-theme");
 });
+/*
+//СУММА
+//function getTotalSum(){
+    let totalSum = 0;
+    let $session = $jsapi.context().session;
 
+    for(let i = 0; i < $session.cart.length; i++){
+        let current_position = $session.cart[i];
+        for(let id = 1; id < Object.keys(pizza).length + 1; id++){
+            if (current_position.name === pizza[id].value.title){
+                let variation = _.find(pizza[id].value.variations, function(variation){
+                    return variation.id === current_position.id;
+                });
+                totalSum += variation.price * current_position.quantity;
+            }
+        }
+    }
+    log("!!!!!!!!!!!! totalSum = " + totalSum);
+    return totalSum;
+} */
 
+/*
+//СУММА
+// Корзина товаров на сайте
+const cart = goods.js[
+    {name:'Milk', price: 25},
+    {name:'Bread', price: 12},
+    {name:'Eggs', price: 17},
+];
 
+// Как просто посчитать сумму всей корзины? Применим reduce():
+const cartTotal = cart.reduce((totalSumm, item) => {
+    totalSumm += item.price;
+// мы всегда должны возвращать аккумулятор как результат работы над каждым элементом.
+    return totalSumm;
+// 0 - здесь, это начальное значение totalSumm.
+}, 0);
+console.log(cartTotal);
+// -> 54
+*/
+/*
+Sum += parseInt(this.childNodes[2].textContent.toString());
+document.getElementById('sum').innerHTML = Sum;*/
 
+/*
+let item_name_objects = document.querySelectorAll('.merch-item-name')
+let item_names = ['Тарелка', 'Кружка', 'Ракета', 'Марсоход']
+for (let i = 0; i < item_name_objects.length; i += 1) {
+   item_name_objects[i].innerHTML = item_names[i]
+}
+
+let item_descriptions = ['Тарелка с принтом Марса. Доступна в красном и белом цветах', 'Кружка с принтом Марса. Доступа в красном и белом цветах', 'Масштабная модель одной из ракет Galaxy', 'Масштабная модель масохода (мы покупаем их у NASA)']
+let item_prices = [1000, 1000, 2500, 5000]
+let item_description_objects = document.querySelectorAll('.merch-item-descr')
+let item_price_objects = document.querySelectorAll('.merch-item-price')
+for (let i = 0; i < item_description_objects.length; i += 1) {
+    item_description_objects[i].innerHTML = item_descriptions[i]
+    item_price_objects[i].innerHTML = item_prices[i]
+}
+ 
+
+let total_price = 0
+let cart_items_count = document.querySelector('.cart-amount')
+let add_to_cart_buttons = document.querySelectorAll('.add-to-cart-btn')
+
+let cart_button = document.querySelectorAll('.nav-item')[4]
+let cart_button_text = cart_button.querySelector('.cart-text')
+
+for (let i = 0; i < add_to_cart_buttons.length; i += 1) {
+    add_to_cart_buttons[i].addEventListener('click', function() {
+        cart_items_count.innerHTML = +cart_items_count.innerHTML + 1
+        total_price += item_prices[i]
+        if (cart_button_text.innerHTML != 'Корзина') {
+            cart_button_text.innerHTML = total_price
+        }
+    })
+}
+cart_button.addEventListener('click', function() {
+    if (cart_button_text.innerHTML == 'Корзина') {
+        cart_button_text.innerHTML = total_price
+    } else {
+        cart_button_text.innerHTML = 'Корзина'
+    }
+})
+*/
 
 
 
