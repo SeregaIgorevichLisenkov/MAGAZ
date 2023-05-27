@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.content {
+	min-height: calc(100vh - 100px);
 }
 
 body {
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
-	padding: 5px;
+	padding: 0;
 	background-image:
 	url("img/background_pattern.png"), 
 	linear-gradient(
@@ -22,6 +27,8 @@ body {
 	display: flex;
 	align-items: center;
 	margin-bottom: 10px;
+	background: #664488ee;
+	justify-content: center;
 }
 
 .separator {
@@ -67,9 +74,10 @@ body {
 	display: grid;
 	grid-template-columns:
 minmax(200px, max-content)
-repeat(auto-fill, 200px) 5%;
+repeat(auto-fill, 200px);
 	grid-gap: 5px;
 	gap: 5px;
+	justify-content: center;
 }
 
 .product-item {
@@ -84,11 +92,15 @@ repeat(auto-fill, 200px) 5%;
 }
 .product-item img {
     display: block;
-    width: 100%; 
 	overflow: hidden;
 	object-fit: cover;
 	background: #ffffff;
 	border-radius: 5px;
+	/*метод обрезки изображения "в квадрат"*/
+	background-position:center center;
+    background-size:cover;
+    width:200px;
+    height:200px;
 }
 .product-list {
     background: #775599;
@@ -125,10 +137,21 @@ repeat(auto-fill, 200px) 5%;
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
+	background: #664488ee;
 	color:  #ffffff;
 	border-radius: 5px;
 }
-
+.cart-item-img {
+	display: flex;
+	overflow: hidden;
+	object-fit: cover;
+	background: #ffffff;
+	border-radius: 5px;
+	background-position:center center;
+    background-size:cover;
+    width:100px;
+    height:100px;
+}
 .cart-item {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -148,22 +171,24 @@ repeat(auto-fill, 200px) 5%;
 	width: 30px;
 }
 
-.shapka {
+.header {
 	border: 1px solid #442266;
     border-radius: 5px;
     background: #664488ee;
 	color: #ffffff;
 	text-align: center;
-	padding: 5px;
+	padding: 0;
 }
 
-.podval {
+.footer {
 	border: 1px solid #442266;
     border-radius: 5px;
     background: #664488ee;
 	color: #ffffff;
 	text-align: center;
-	padding: 5px;
+	padding: 0;
+	margin-top: 10px;
+	height: 90px;
 }
 /*кнопка день/ночь*/
 
@@ -183,7 +208,7 @@ repeat(auto-fill, 200px) 5%;
 body.dark-theme {
 		font-family: 'Montserrat', sans-serif;
 		height: 100vh;
-		padding: 5px;
+		padding: 0;
 		background-image:
 		url("img/background_pattern.png"), 
 		linear-gradient(
@@ -195,22 +220,23 @@ body.dark-theme {
 		background-attachment: fixed;
 	}
 	
-	body.dark-theme .shapka {
+	body.dark-theme .header {
 		border: 1px solid #cc99ff;
 		border-radius: 5px;
 		background: #eeddffdd;
 		color: #442266;
 		text-align: center;
-		padding: 5px;
+		padding: 0;
 	}
 	
-	body.dark-theme .podval {
+	body.dark-theme .footer {
 		border: 1px solid #cc99ff;
 		border-radius: 5px;
 		background: #eeddffdd;
 		color: #442266;
 		text-align: center;
-		padding: 5px;
+		padding: 0;
+		height: 100px
 	}
 	body.dark-theme .product-item {
 		width: 200px;

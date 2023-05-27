@@ -253,9 +253,10 @@ function renderCart() {
 		cartItem.dataset.elementId = product.id;
 		cartItem.className = 'cart-item';
 		cartItem.innerHTML = `
+	<div class="cart-item-img"><img src="${product.imgSrc}"></div>
 	<div class="cart-item-title">${product.name}</div>
-  	<div class="cart-item-count">${product.count} шт.</div>
-  	<div class="cart-item-price">₽ ${product.price}</div>
+	<div class="cart-item-count">${product.count} шт.</div>
+	<div class="cart-item-price">₽ ${product.price}</div>
 		`;
 
 		const clickHander = removeInCartHandler(product.id);
