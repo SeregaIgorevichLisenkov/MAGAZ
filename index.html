@@ -1,52 +1,44 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-    <title>Магазинчик</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<title>Магазинчик</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-
 <body>
-    <div class="wrapper">
-        <div class="content">
-            <div class="header">
-                <!--шапка сайта-->
-                <h1>КУПИ МЕМАС</h1>
-                <span class="btn-toggle">
+<div class="wrapper">
+	<div class="content">
+		<div class="header"><!--шапка сайта-->
+			<h1>КУПИ МЕМАС</h1>
+			<span class="btn-toggle">
 				<span class="material-symbols-outlined">
 					light_mode
 				</span>
-                </span>
-            </div>
-            <div class="tabs">
-                <!--табы-->
-                <span class="separator">|</span>
-                <button class="tab" data-tab-id="goods">Товарчики</button>
-                <span class="separator">|</span>
-                <button class="tab" data-tab-id="goods_2">Еще Товарчики</button>
-                <!--добавляем кнопку-->
-                <span class="separator">|</span>
-                <button class="tab" data-tab-id="goods_3">И Еще Немножко</button>
-                <!--добавляем кнопку-->
-                <span class="separator">|</span>
-                <button class="tab cart-tab" data-goods-count="0" data-tab-id="cart">Корзиночка</button>
-                <span class="separator">|</span>
-            </div>
-        </div>
-        <div class="footer">
-            <!--подвал сайта-->
-            <h4>ну купи, пожалуйста</h4>
-        </div>
-    </div>
-    <!-- СКРИПТЫ (подгружаем в конце, чтобы не тормозить ими загрузку страницы) -->
-    <script src="index.js"></script>
-    <script src="goods.js"></script>
-    <script src="goods_2.js"></script>
+			</span>
+		</div>
+		<div class="tabs"><!--табы-->
+			<span class="separator">|</span>
+<button class="tab" data-tab-id="goods">Товарчики</button>
+			<span class="separator">|</span>
+<button class="tab" data-tab-id="goods_2">Еще Товарчики</button><!--добавляем кнопку-->
+			<span class="separator">|</span>
+<button class="tab" data-tab-id="goods_3">И Еще Немножко</button><!--добавляем кнопку-->
+			<span class="separator">|</span>
+<button class="tab cart-tab" data-goods-count="0" data-tab-id="cart">Корзиночка</button>
+			<span class="separator">|</span>
+		</div>
+	</div>
+	<div class="footer"><!--подвал сайта-->
+		<h4>ну купи, пожалуйста</h4>
+	</div>
+</div>
+<!-- СКРИПТЫ (подгружаем в конце, чтобы не тормозить ими загрузку страницы) -->
+	<script src="index.js"></script>
+	<script src="goods.js"></script>
+	<script src="goods_2.js"></script>
+	<script src="goods_3.js"></script>
 </body>
-
 </html>
