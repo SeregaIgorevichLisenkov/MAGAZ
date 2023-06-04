@@ -34,13 +34,13 @@ body {
 .separator {
 	margin: 0 5px;
 	font-size: 30px;
-	color: #ffffff;
+	color: #442266;
 }
 
 .tab {
 	display: flex;
 	align-items: center;
-	font-size: 30px;
+	font-size: 20px;
 	border: none;
 	background: transparent;
 	color: #ffaa00;

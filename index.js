@@ -166,6 +166,9 @@ function renderTabContentById(tabId) {
 	else if (tabId === 'goods_2') { //добавляем id кнопки
 		html = renderGoods_2(); //указываем метод рендера
 	}
+	else if (tabId === 'goods_3') { //добавляем id кнопки
+		html = renderGoods_3(); //указываем метод рендера
+	}
 	else {
 		html = renderCart();
 	}
@@ -254,6 +257,48 @@ function renderGoods_2() { // тут меняем (метод рендера)
 
 	return div;
 }
+// прописываем рендер (копируем предыдущий меняя название переменных в трех местах)
+function renderGoods_3() { // тут меняем (метод рендера)
+	const div = document.createElement('div');
+	div.dataset.activeTabContent = 'true';
+	div.className = 'product-items';
+
+	for (let i = 0; i < GOODS_3.length; i++) { // и тут меняем (название массива)
+		const product = createProduct(GOODS_3[i]); // и еще тут меняем (название массива)
+
+		const price = product.price === null
+			? '<p>Товар закончился</p>'
+			: `<p class="price">₽ ${product.price}</p>`;
+
+		const productBlock = document.createElement('div');
+		productBlock.className = 'product-item';
+		productBlock.innerHTML = `
+			<img src="${product.imgSrc}">
+			<div class="product-list">
+		    	<h3>${product.name}</h3>
+		    	${price}
+			</div>
+		`;
+
+		if (product.price !== null) {
+			const clickHander = addInCartHandler(product);
+
+			const button = document.createElement('button');
+			button.className = 'button';
+			button.textContent = 'В КОРЗИНОЧКУ';
+			button.addEventListener('click', clickHander);
+
+			productBlock.querySelector('.product-list').append(button);
+		}
+
+		
+		div.append(productBlock);
+	}
+
+	return div;
+}
+
+// ---
 
 function renderCart() { const container = document.createElement('div'); 
 container.dataset.activeTabContent = 'true'; container.className = 'cart-items';
