@@ -171,6 +171,22 @@ repeat(auto-fill, 200px);
 	width: 30px;
 }
 
+/*счётчик*/
+.cart-item-change  {
+	justify-content: center;
+	align-items: center;
+	margin-left: 5px;
+	border: 1px solid #442266;
+	color:  #442266;
+	font-size: 15px;
+	background: #ffaa00;
+	height: 25px;
+	width:  25px;
+	border-radius: 50%;
+	cursor: pointer;
+	user-select: none;
+}
+
 .header {
 	border: 1px solid #442266;
     border-radius: 5px;
@@ -202,6 +218,10 @@ repeat(auto-fill, 200px);
 
 .btn-toggle{
 	cursor: pointer;
+}
+
+.total-price {
+	text-align: center;
 }
 
 /* ТЁМНАЯ ТЕМА */
@@ -278,6 +298,7 @@ body.dark-theme {
 	body.dark-theme .button:hover {
 		background: #ff7700;
 	}
+
 
 
 
